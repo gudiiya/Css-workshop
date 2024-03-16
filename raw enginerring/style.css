@@ -1,0 +1,149 @@
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed; 
+    width:95%;.
+}
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.nav-menu li {
+    float: right;
+}
+.nav-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-menu li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.logo img {
+    height: 50px;
+    width: auto; /* Change width to auto for responsive resizing */
+}
+/* Section */
+section {
+    padding: 70px 0; /* Adjust padding to be more responsive */
+    background-color: black;
+    color: white; /* Add color for better visibility */
+}
+/* Home */
+.home {
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+.home-img img {
+    max-width: 100%; /* Set max-width to ensure image responsiveness */
+    height: auto; /* Allow image to scale proportionally */
+    padding-right: 80px;
+}
+.home-text h1 {
+    font-size: 4.2rem;
+}
+.home-text h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0 2rem;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-slide {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.content-box,
+.image-box {
+  width: 500px;
+  height: 700px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.content-box {
+  left: calc(90% - 350px); /* Half of the box width */
+  animation-name: slideFromRight;
+}
+.image-box {
+  right: calc(50% - 100px); /* Half of the box width */
+  animation-name: slideFromLeft;
+}
+.image-box img{
+  width: 500px;
+  height: 500px;
+}
+.content {
+  padding: 20px;
+}
+h1 {
+  margin: 0;
+}
+p {
+  margin: 10px 0;
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+h1 {
+  margin: 0;
+}
+p {
+  margin: 10px 0;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
